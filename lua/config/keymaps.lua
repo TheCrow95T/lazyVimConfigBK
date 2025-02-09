@@ -5,8 +5,8 @@
 local keymap = vim.keymap.set
 
 -- General keybinding
-keymap("n", "<C-s>", ":wa<CR>", { desc = "Save all files" })
-keymap("n", "<C-m>", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Mark" })
+keymap("n", "<C-s>", "<cmd>wa<CR>", { desc = "Save all files" })
+keymap("n", "<C-m>", "<cmd>delm! | delm A-Z0-9<CR>", { desc = "Clear Mark" })
 
 -- Neotree keybinding
 keymap("n", "<leader><C-e>", "<cmd>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
@@ -42,9 +42,9 @@ keymap("n", "<C-t>", "<cmd>lua require('FTerm').toggle()<CR>", { desc = "Open To
 keymap("t", "<C-t>", "<C-\\><C-n><cmd>lua require('FTerm').toggle()<CR>", { desc = "Close ToggleTerm" })
 
 -- Telescope
-keymap("n", "<leader>ft", ":TodoTelescope<CR>", { desc = "Find TODO from current directory" })
-keymap("n", "<leader>fp", ":Telescope project<CR>", { desc = "Find Project" })
-keymap("n", "<leader>fk", ":Telescope keymaps<CR>", { desc = "Find Keymapping" })
-keymap("n", "<leader>fm", ":Telescope harpoon marks<CR>", { desc = "Find Mark" })
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
-keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", { desc = "Find buffers" })
+keymap("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find TODO from current directory" })
+keymap("n", "<leader>fp", "<cmd>Telescope project<CR>", { desc = "Find Project" })
+keymap("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Find Keymapping" })
+keymap("n", "<leader>fm", "<cmd>Telescope harpoon marks<CR>", { desc = "Find Mark" })
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
+keymap("n", "<leader>fc", "<cmd>Telescope colorscheme<CR>", { desc = "Find buffers" })
